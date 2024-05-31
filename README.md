@@ -210,25 +210,6 @@ const RecipesScreen = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 10,
-  },
-  addButton: {
-    backgroundColor: "orange",
-    padding: 10,
-    borderRadius: 5,
-    marginBottom: 10,
-    alignItems: "center",
-  },
-  addButtonText: {
-    color: "white",
-    fontWeight: "bold",
-  },
-});
-
-export default RecipesScreen;
 ```
 
 ### Output
