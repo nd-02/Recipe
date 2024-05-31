@@ -93,12 +93,11 @@ Required props are `url` and `children`:
 #### Example
 
 ```jsx
-import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+
 import OpenURLWrapper from "../components/OpenURLButton";
 
 const RecipeDetailsScreen = ({ route }) => {
-  const { recName, image, ingredients } = route.params;
+  const { recName, image } = route.params;
   const linkIcon =
     "https://static-00.iconduck.com/assets.00/create-link-icon-2048x2048-vdoe2pfs.png";
 
@@ -111,63 +110,10 @@ const RecipeDetailsScreen = ({ route }) => {
           <Image source={{ uri: linkIcon }} style={styles.icon} />
         </OpenURLWrapper>
       </View>
-
-      {ingredients && ingredients.length > 0 && (
-        <View style={styles.ingredientsContainer}>
-          <Text style={styles.subtitle}>Ingredients:</Text>
-          {ingredients.map((ingr, index) => (
-            <Text key={index} style={styles.ingredientsText}>
-              {`${ingr.ingredient.name.toLowerCase()} ${ingr.quantity}${
-                ingr.ingredient.unityOfMeasure
-              }`}
-            </Text>
-          ))}
-        </View>
-      )}
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-  },
-  image: {
-    width: "100%",
-    height: 200,
-    marginBottom: 20,
-    borderRadius: 10,
-  },
-  detailsContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginBottom: 10,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-  },
-  icon: {
-    width: 40,
-    height: 40,
-  },
-  ingredientsContainer: {
-    marginTop: 20,
-  },
-  subtitle: {
-    fontSize: 20,
-    fontWeight: "bold",
-    marginBottom: 10,
-  },
-  ingredientsText: {
-    fontSize: 16,
-    marginBottom: 5,
-  },
-});
-
-export default RecipeDetailsScreen;
 ```
 
 ### Output
@@ -197,10 +143,7 @@ Required props are recipe details including `id`, `name`, `numTimes`, `ingredien
 #### Example
 
 ```jsx
-import React from "react";
-import { View, FlatList, Pressable, Text, StyleSheet } from "react-native";
 import RecipeItem from "../components/RecipeItem";
-import { useNavigation } from "@react-navigation/native";
 
 const recipes = [
   {
