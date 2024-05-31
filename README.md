@@ -172,7 +172,7 @@ export default RecipeDetailsScreen;
 
 ### Output
 
-spazio per lo screen
+../images/RecipeScreenOutput.jpg
 
 #### Props
 
