@@ -233,7 +233,7 @@ export default RecipesScreen;
 
 ### Output
 
-![Recipe Screen Output](/images/RecipeScreenOutput.jpg)
+![Recipe Screen Output](/images/RecipeScreenOutput1.jpg)
 
 When a recipe item is pressed, it navigates to the detailed recipe view.
 
