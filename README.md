@@ -172,7 +172,7 @@ export default RecipeDetailsScreen;
 
 ### Output
 
-../images/RecipeScreenOutput.jpg
+![Recipe Screen Output](/images/RecipeDetailsScreenOutput.jpg)
 
 #### Props
 
@@ -289,6 +289,8 @@ export default RecipesScreen;
 ```
 
 ### Output
+
+![Recipe Screen Output](/images/RecipeScreenOutput.jpg)
 
 When a recipe item is pressed, it navigates to the detailed recipe view.
 
