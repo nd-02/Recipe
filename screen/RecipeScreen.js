@@ -35,8 +35,7 @@ const RecipesScreen = () => {
     navigation.navigate('RecipeDetails', {
       id: item.id,
       recName: item.name,
-      image: item.image,
-      ingredients: item.ingredients  
+      image: item.image
     });
   };
 
@@ -52,7 +51,7 @@ const RecipesScreen = () => {
             id={item.id}
             name={item.name}
             numTimes={item.numTimes}
-            ingredients={item.ingredients}
+            ingredients={item.ingredients} 
             image={item.image}
             onPress={() => navigateToDetails(item)}
           />
